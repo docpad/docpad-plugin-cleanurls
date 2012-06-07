@@ -2,6 +2,8 @@
 module.exports = (testers) ->
 	# Define My Tester
 	class MyTester extends testers.ServerTester
+		docpadConfig:
+			logLevel: 7
 		testServer: (next) ->
 			# Requires
 			docpad = @docpad

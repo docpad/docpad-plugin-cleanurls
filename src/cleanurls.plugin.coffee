@@ -9,9 +9,8 @@ module.exports = (BasePlugin) ->
 		parseAfter: (opts,next) ->
 			# Prepare
 			docpad = @docpad
-			logger = @logger
 			database = docpad.getDatabase()
-			logger.log 'debug', 'Creating clean urls'
+			docpad.log 'debug', 'Creating clean urls'
 
 			# Find everything with a html extension
 			database.findAll(outPath: $endsWith: '.html').forEach (document) ->
@@ -31,5 +30,5 @@ module.exports = (BasePlugin) ->
 					document.set(url: relativeDirUrl)
 
 			# Done
-			logger.log 'debug', 'Created clean urls'
+			docpad.log 'debug', 'Created clean urls'
 			next?()
