@@ -1,5 +1,10 @@
 ## History
 
+- v2.3.0 January 4, 2013
+	- Now supports static environments by changing the document's `outPath` to that of a directory with an `index.html` file inside.
+	- Updated tests to also check the directory output
+	- Updated coffeescript devDependency to v1.4.0
+
 - v2.2.5 October 8, 2012
 	- Fixed plugin name (`cleanUrls` to `cleanurls`)
 

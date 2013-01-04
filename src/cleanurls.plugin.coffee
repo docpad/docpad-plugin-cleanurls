@@ -5,27 +5,35 @@ module.exports = (BasePlugin) ->
 		# Plugin name
 		name: 'cleanurls'
 
-		# Plugin configuration
-		# Do not enable us on the static environment
-		config:
-			environments:
-				static:
-					enabled: false
-
-		# Clean URLize
-		cleanURLize: (document) ->
-			# Prepare
-			documentUrl = document.get('url')
+		# Path to URL
+		pathToUrl: (path) ->
 			slashRegex = /\\/g
+			return path.replace(slashRegex, '/')
 
-			# Extnesionless URL
+		# Clean URLs for Document
+		cleanUrlsForDocument: (document) =>
+			# Prepare
+			pathUtil = require('path')
+			documentUrl = document.get('url')
+
+			# Environment Output
+			if 'static' in @docpad.getEnvironments() and document.get('outFilename') isnt 'index.html' and document.get('outPath')
+				outFilename = 'index.html'
+				outPath = document.get('outPath').replace(/\.html$/,"/#{outFilename}")
+				outDirPath = pathUtil.dirname(outPath)
+				relativeOutPath = document.get('relativeOutPath').replace(/\.html$/,"/#{outFilename}")
+				relativeOutDirPath = pathUtil.dirname(relativeOutPath)
+				set = {outFilename,outPath,outDirPath,relativeOutPath,relativeOutDirPath}
+				document.set(set)
+
+			# Extensionless URL
 			if /\.html$/i.test(documentUrl)
-				relativeBaseUrl = '/'+document.get('relativeBase').replace(slashRegex,'/')
+				relativeBaseUrl = '/' + @pathToUrl document.get('relativeBase')
 				document.setUrl(relativeBaseUrl)
 
 			# Index URL
 			if /index\.html$/i.test(documentUrl)
-				relativeDirUrl = '/'+document.get('relativeDirPath').replace(slashRegex,'/')
+				relativeDirUrl = '/' + @pathToUrl document.get('relativeDirPath')
 				document.setUrl(relativeDirUrl)
 
 			# Done
@@ -39,7 +47,7 @@ module.exports = (BasePlugin) ->
 			docpad.log 'debug', 'Applying clean urls'
 
 			# When we get a new document, update its url
-			database.on('add change', @cleanURLize)
+			database.on('add change', @cleanUrlsForDocument)
 
 			# All done
 			docpad.log 'debug', 'Applied clean urls'
