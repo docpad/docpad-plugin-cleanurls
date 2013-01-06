@@ -1,5 +1,10 @@
 ## History
 
+- v2.4.0 January 6, 2013
+	- Clean URLs for the static environment now operates more gracefully
+		- No longer modifies the out path and corresponding attributes
+		- Now work by outputting redirect file to the secondary url paths, and the result file to the primary url path
+
 - v2.3.0 January 4, 2013
 	- Now supports static environments by changing the document's `outPath` to that of a directory with an `index.html` file inside.
 	- Updated tests to also check the directory output

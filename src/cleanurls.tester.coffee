@@ -2,7 +2,6 @@
 module.exports = (testers) ->
 	# Define My Tester
 	class MyTester extends testers.ServerTester
-
 		# Test Generate
 		testGenerate: testers.RendererTester::testGenerate
 
@@ -22,16 +21,12 @@ module.exports = (testers) ->
 				# Prepare
 				baseUrl = "http://localhost:#{tester.docpad.config.port}"
 				outExpectedPath = tester.config.outExpectedPath
-				fileUrl = "#{baseUrl}/welcome"
-				filePath = "#{outExpectedPath}/welcome.html"
+				fileUrl = "#{baseUrl}/welcome/"
 
 				test 'server should serve URLs without an extension', (done) ->
 					request fileUrl, (err,response,actual) ->
 						return done(err)  if err
 						actualStr = actual.toString()
-
-						fsUtil.readFile filePath, (err,expected) ->
-							return done(err)  if err
-							expectedStr = expected.toString()
-							expect(actualStr).to.equal(expectedStr)
-							done()
+						expectedStr = 'Welcome'
+						expect(actualStr).to.equal(expectedStr)
+						done()
