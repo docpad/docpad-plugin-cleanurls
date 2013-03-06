@@ -1,5 +1,10 @@
 ## History
 
+- v2.4.1 March 6, 2013
+	- Dependency upgrades
+		-  `bal-util` from ~1.15.3 to ~1.16.8
+		-  `coffee-script` from 1.4.x to ~1.4.0
+
 - v2.4.0 January 6, 2013
 	- Clean URLs for the static environment now operates more gracefully
 		- No longer modifies the out path and corresponding attributes
