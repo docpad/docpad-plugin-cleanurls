@@ -62,7 +62,8 @@ module.exports = (BasePlugin) ->
 			docpad = @docpad
 			docpadConfig = docpad.getConfig()
 			database = docpad.getCollection('html')
-			balUtil = require('bal-util')
+			TaskGroup = require('taskgroup')
+			safefs = require('safefs')
 			pathUtil = require('path')
 			getCleanOutPathFromUrl = (url) ->
 				url = url.replace(/\/+$/,'')
@@ -75,12 +76,12 @@ module.exports = (BasePlugin) ->
 			if 'static' in docpad.getEnvironments()
 				# Tasks
 				docpad.log 'debug', 'Writing static clean url files'
-				tasks = new balUtil.Group (err) ->
+				tasks = new TaskGroup (err) ->
 					docpad.log 'debug', 'Wrote static clean url files'
 					return next(err)
 				addWriteTask = (outPath, outContent, encoding) ->
 					tasks.push (complete) ->
-						return balUtil.writeFile(outPath, outContent, encoding, complete)
+						return safefs.writeFile(outPath, outContent, encoding, complete)
 
 				# Cycle
 				database.forEach (document) ->

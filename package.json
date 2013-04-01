@@ -1,6 +1,6 @@
 {
 	"name": "docpad-plugin-cleanurls",
-	"version": "2.4.1",
+	"version": "2.4.2",
 	"description": "Adds support for clean urls to DocPad",
 	"homepage": "http://docpad.org/plugin/cleanurls",
 	"keywords": [
@@ -28,10 +28,11 @@
 		"docpad": ">=6.3 <7"
 	},
 	"dependencies": {
-		"bal-util": "~1.16.8"
+		"safefs": "~2.0.3",
+		"taskgroup": "~2.0.0"
 	},
 	"devDependencies": {
-		"coffee-script": "~1.4.0"
+		"coffee-script": "~1.6.2"
 	},
 	"main": "./out/cleanurls.plugin.js",
 	"scripts": {

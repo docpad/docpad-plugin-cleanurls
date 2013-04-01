@@ -1,5 +1,8 @@
 ## History
 
+- v2.4.2 April 1, 2013
+	- Dependency upgrades
+
 - v2.4.1 March 6, 2013
 	- Dependency upgrades
 		-  `bal-util` from ~1.15.3 to ~1.16.8
