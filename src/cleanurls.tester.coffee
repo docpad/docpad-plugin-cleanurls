@@ -1,5 +1,9 @@
 # Export Plugin Tester
 module.exports = (testers) ->
+	# PRepare
+	{expect} = require('chai')
+	request = require('request')
+
 	# Define My Tester
 	class MyTester extends testers.ServerTester
 		# Test Generate
@@ -9,9 +13,6 @@ module.exports = (testers) ->
 		testServer: (next) ->
 			# Prepare
 			tester = @
-			expect = testers.expect
-			request = testers.request
-			fsUtil = require('fs')
 
 			# Create the server
 			super

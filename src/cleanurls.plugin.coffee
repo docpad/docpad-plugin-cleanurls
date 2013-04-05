@@ -62,7 +62,7 @@ module.exports = (BasePlugin) ->
 			docpad = @docpad
 			docpadConfig = docpad.getConfig()
 			database = docpad.getCollection('html')
-			TaskGroup = require('taskgroup')
+			{TaskGroup} = require('taskgroup')
 			safefs = require('safefs')
 			pathUtil = require('path')
 			getCleanOutPathFromUrl = (url) ->
@@ -76,11 +76,11 @@ module.exports = (BasePlugin) ->
 			if 'static' in docpad.getEnvironments()
 				# Tasks
 				docpad.log 'debug', 'Writing static clean url files'
-				tasks = new TaskGroup (err) ->
+				tasks = new TaskGroup().setConfig(concurrency:0).once 'complete', (err) ->
 					docpad.log 'debug', 'Wrote static clean url files'
 					return next(err)
 				addWriteTask = (outPath, outContent, encoding) ->
-					tasks.push (complete) ->
+					tasks.addTask (complete) ->
 						return safefs.writeFile(outPath, outContent, encoding, complete)
 
 				# Cycle
@@ -113,7 +113,7 @@ module.exports = (BasePlugin) ->
 						addWriteTask(redirectOutPath, redirectContent, encoding)
 
 				# Fire
-				tasks.async()
+				tasks.run()
 
 			# Development
 			else

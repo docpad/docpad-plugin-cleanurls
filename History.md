@@ -1,5 +1,8 @@
 ## History
 
+- v2.4.3 April 5, 2013
+	- Dependency upgrades
+
 - v2.4.2 April 1, 2013
 	- Dependency upgrades
 
