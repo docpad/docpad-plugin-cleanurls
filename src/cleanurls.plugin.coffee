@@ -21,22 +21,27 @@ module.exports = (BasePlugin) ->
 				</html>
 				"""
 
+			trailingSlashes: false
+
 		# Clean URLs for Document
 		cleanUrlsForDocument: (document) =>
 			# Prepare
 			url = document.get('url')
 			pathUtil = require('path')
+			trailingSlashes = @config.trailingSlashes
 
 			# Index URL
 			if /index\.html$/i.test(url)
 				relativeDirUrl = pathUtil.dirname(url)
+				if trailingSlashes and relativeDirUrl isnt '/'
+					relativeDirUrl += '/'
 				document.setUrl(relativeDirUrl)
 
 			# Create Extensionless URL
 			else if /\.html$/i.test(url)
 				relativeBaseUrl = url.replace(/\.html$/,'')
-				document.setUrl(relativeBaseUrl)
-				document.addUrl(relativeBaseUrl+'/')
+				document.setUrl(relativeBaseUrl + if trailingSlashes then '/' else '')
+				document.addUrl(relativeBaseUrl + if trailingSlashes then '' else '/')
 
 			# Done
 			document
