@@ -25,6 +25,10 @@ environments:
 				enabled: false
 ```
 
+### trailingSlashes
+
+Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
+
 
 ## History
 You can discover the history inside the `History.md` file
