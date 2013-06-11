@@ -1,5 +1,10 @@
 ## History
 
+- v2.5.0 June 12, 2013
+	- Optionally generate document urls with trailing slashes
+		- Thanks to [Adam Hull](https://github.com/hurrymaplelad) for [pull request #4](https://github.com/docpad/docpad-plugin-cleanurls/pull/4)
+	- Dependency upgrades
+
 - v2.4.3 April 5, 2013
 	- Dependency upgrades
 
