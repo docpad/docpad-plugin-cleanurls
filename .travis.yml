@@ -1,4 +1,4 @@
-# v1.1.0 June 12, 2013
+# v1.1.1 June 25, 2013
 # This file was originally created by Benjamin Lupton <b@lupton.cc> (http://balupton.com)
 # and is currently licensed under the Creative Commons Zero (http://creativecommons.org/publicdomain/zero/1.0/)
 # making it public domain so you can do whatever you wish with it without worry (you can even remove this notice!)
