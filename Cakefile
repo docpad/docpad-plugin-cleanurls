@@ -4,6 +4,7 @@
 # making it public domain so you can do whatever you wish with it without worry (you can even remove this notice!)
 #
 # If you change something here, be sure to reflect the changes in:
+# - the Cakefile
 # - the scripts section of the package.json file
 # - the .travis.yml file
 
