@@ -39,7 +39,7 @@ module.exports = (BasePlugin) ->
 
 			# Create Extensionless URL
 			else if /\.html$/i.test(url)
-				relativeBaseUrl = url.replace(/\.html$/,'')
+				relativeBaseUrl = url.replace(/\.html$/, '')
 				document.setUrl(relativeBaseUrl + if trailingSlashes then '/' else '')
 				document.addUrl(relativeBaseUrl + if trailingSlashes then '' else '/')
 
@@ -50,11 +50,11 @@ module.exports = (BasePlugin) ->
 		renderBefore: (opts) ->
 			# Prepare
 			docpad = @docpad
-			database = docpad.getCollection('html')
+			collection = docpad.getCollection('html')
 
 			# When we get a new document, update its url
 			docpad.log 'debug', 'Applying clean urls'
-			database.forEach @cleanUrlsForDocument
+			collection.forEach @cleanUrlsForDocument
 			docpad.log 'debug', 'Applied clean urls'
 
 			# All done
@@ -66,7 +66,7 @@ module.exports = (BasePlugin) ->
 			config = @config
 			docpad = @docpad
 			docpadConfig = docpad.getConfig()
-			database = docpad.getCollection('html')
+			collection = docpad.getCollection('html')
 			{TaskGroup} = require('taskgroup')
 			safefs = require('safefs')
 			pathUtil = require('path')
@@ -89,7 +89,7 @@ module.exports = (BasePlugin) ->
 						return safefs.writeFile(outPath, outContent, encoding, complete)
 
 				# Cycle
-				database.forEach (document) ->
+				collection.forEach (document) ->
 					# Check
 					return  if document.get('write') is false or document.get('ignore') is true or document.get('render') is false
 

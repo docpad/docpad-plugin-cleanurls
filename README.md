@@ -11,7 +11,7 @@ Adds support for clean URLs to [DocPad](https://docpad.org)
 ## Install
 
 ```
-npm install --save docpad-plugin-cleanurls
+docpad install cleanurls
 ```
 
 
