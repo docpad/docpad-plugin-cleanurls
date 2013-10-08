@@ -35,6 +35,20 @@ environments:
 
 Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
+### skipCleanUrls
+
+Add `skipCleanUrls: true` as metadata to any document that you would like to bypass the normal cleanurls processing on.  For example, you may want to bypass cleanurls processing for your 404.html.md page.
+
+```
+---
+layout: page
+title: Oops! Page Not Found
+skipCleanUrls: true
+---
+
+Oops! Page Not Found.
+
+```
 
 ## History
 [You can discover the history inside the `History.md` file](https://github.com/bevry/docpad-plugin-cleanurls/blob/master/History.md#files)
