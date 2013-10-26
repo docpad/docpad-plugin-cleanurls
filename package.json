@@ -1,45 +1,47 @@
 {
-	"name": "docpad-plugin-cleanurls",
-	"version": "2.5.1",
-	"description": "Adds support for clean urls to DocPad",
-	"homepage": "http://docpad.org/plugin/cleanurls",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"clean urls",
-		"seo"
-	],
-	"author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-	"maintainers": [
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"contributors": [
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
-		"Adam Hull (https://github.com/hurrymaplelad)"
-	],
-	"bugs": {
-		"url": "https://github.com/bevry/docpad-extras/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "https://github.com/bevry/docpad-extras.git"
-	},
-	"engines" : {
-		"node": ">=0.4",
-		"docpad": ">=6.3 <7"
-	},
-	"dependencies": {
-		"safefs": "~3.0.1",
-		"taskgroup": "~3.2.0"
-	},
-	"devDependencies": {
-		"coffee-script": "~1.6.2",
-		"docpad": ">=6.37 <7",
-		"chai": "~1.7.1",
-		"request": "~2.27.0"
-	},
-	"main": "./out/cleanurls.plugin.js",
-	"scripts": {
-		"test": "node ./out/cleanurls.test.js"
-	}
+  "name": "docpad-plugin-cleanurls",
+  "version": "2.5.1",
+  "description": "Adds support for clean urls to DocPad",
+  "homepage": "http://docpad.org/plugin/cleanurls",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "clean urls",
+    "seo"
+  ],
+  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "maintainers": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "contributors": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+    "Adam Hull (https://github.com/hurrymaplelad)"
+  ],
+  "bugs": {
+    "url": "https://github.com/bevry/docpad-extras/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bevry/docpad-extras.git"
+  },
+  "engines": {
+    "node": ">=0.4",
+    "docpad": ">=6.3 <7"
+  },
+  "dependencies": {
+    "safefs": "~3.0.1",
+    "taskgroup": "~3.2.0"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2",
+    "chai": "~1.7.1",
+    "request": "~2.27.0"
+  },
+  "main": "./out/cleanurls.plugin.js",
+  "scripts": {
+    "test": "node ./out/cleanurls.test.js"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  }
 }
