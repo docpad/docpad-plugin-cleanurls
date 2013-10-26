@@ -41,6 +41,6 @@
     "test": "node ./out/cleanurls.test.js"
   },
   "peerDependencies": {
-    "docpad": "6"
+    "docpad": ">=6.3 <7"
   }
 }
