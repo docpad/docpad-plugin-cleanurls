@@ -25,6 +25,9 @@ module.exports = (BasePlugin) ->
 
 		# Clean URLs for Document
 		cleanUrlsForDocument: (document) =>
+			# short circuit for docs that want to keep their .html 
+			return if document.get('cleanurl') is false
+
 			# Prepare
 			url = document.get('url')
 			pathUtil = require('path')
@@ -91,7 +94,7 @@ module.exports = (BasePlugin) ->
 				# Cycle
 				collection.forEach (document) ->
 					# Check
-					return  if document.get('write') is false or document.get('ignore') is true or document.get('render') is false
+					return  if document.get('cleanurl') is false or document.get('write') is false or document.get('ignore') is true or document.get('render') is false
 
 					# Prepare
 					encoding = document.get('encoding')
