@@ -34,7 +34,8 @@
   "devDependencies": {
     "coffee-script": "~1.6.2",
     "chai": "~1.7.1",
-    "request": "~2.27.0"
+    "request": "~2.27.0",
+    "docpad": "~6.54.5"
   },
   "main": "./out/cleanurls.plugin.js",
   "scripts": {

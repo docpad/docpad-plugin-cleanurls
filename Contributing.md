@@ -15,25 +15,13 @@
 ### Install dependencies
 
 ``` bash
-npm install; npm install -g coffee-script
-```
-
-### Setup for development
-
-``` bash
-cake setup
+npm install; npm install -g coffee-script; pushd node_modules/docpad/; npm install; popd
 ```
 
 ### Watch and compile
 
 ``` bash
 cake watch
-```
-
-### Setup for testing
-
-``` bash
-cake test-setup
 ```
 
 ### Run the tests
