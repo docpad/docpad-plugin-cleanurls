@@ -35,7 +35,9 @@ environments:
 
 Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
-You can make this plugin skip specific documents by adding the following metadata:
+### Ignoring particular documents
+
+You can make this plugin skip specific documents by adding this to their metadata:
 
     cleanurl: false
 
