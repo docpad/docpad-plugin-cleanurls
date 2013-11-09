@@ -35,6 +35,12 @@ environments:
 
 Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
+### Ignoring particular documents
+
+You can make this plugin skip specific documents by adding this to their metadata:
+
+    cleanurl: false
+
 
 ## History
 [You can discover the history inside the `History.md` file](https://github.com/bevry/docpad-plugin-cleanurls/blob/master/History.md#files)
