@@ -34,15 +34,11 @@ module.exports = (testers) ->
 
 				test 'documents should have urls without extensions', (done) ->
 					actualUrls = tester.docpad.getCollection('documents').map (doc) -> doc.get('url')
-					expectedUrls = ['/', '/hi', '/welcome']
+
+					if tester.docpad.getPlugin('cleanurls').getConfig().trailingSlashes
+						expectedUrls = ['/', '/hi', '/welcome/']
+					else
+						expectedUrls = ['/', '/hi', '/welcome']
+
 					expect(actualUrls.sort()).to.deep.equal(expectedUrls)
 					done()
-
-				test 'enabling trailingSlashes should append slashes to document urls', (done) ->
-					tester.docpad.loadedPlugins.cleanurls.config.trailingSlashes = true
-					tester.docpad.action 'generate', (err) ->
-						return done(err) if err
-						actualUrls = tester.docpad.getCollection('documents').map (doc) -> doc.get('url')
-						expectedUrls = ['/', '/hi', '/welcome/']
-						expect(actualUrls.sort()).to.deep.equal(expectedUrls)
-						done()

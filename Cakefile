@@ -1,4 +1,4 @@
-# v1.3.1 October 26, 2013
+# v1.3.8 November 7, 2013
 # https://github.com/bevry/base
 
 
@@ -25,6 +25,7 @@ SRC_DIR       = pathUtil.join(APP_DIR, "src")
 OUT_DIR       = pathUtil.join(APP_DIR, "out")
 TEST_DIR      = pathUtil.join(APP_DIR, "test")
 MODULES_DIR   = pathUtil.join(APP_DIR, "node_modules")
+DOCPAD_DIR    = pathUtil.join(MODULES_DIR, "docpad")
 BIN_DIR       = pathUtil.join(MODULES_DIR, ".bin")
 GIT           = "git"
 CAKE          = pathUtil.join(BIN_DIR, "cake#{EXT}")
@@ -87,7 +88,12 @@ actions =
 			fsUtil.exists TEST_DIR, (exists) ->
 				return next()  unless exists
 				# npm install (for test)
-				spawn(NPM, ['install'], {stdio:'inherit', cwd:TEST_DIR}).on('close', safe next)
+				spawn(NPM, ['install'], {stdio:'inherit', cwd:TEST_DIR}).on('close', safe next, step3)
+		step3 = ->
+			fsUtil.exists DOCPAD_DIR, (exists) ->
+				return next()  unless exists
+				# npm install (for test)
+				spawn(NPM, ['install'], {stdio:'inherit', cwd:DOCPAD_DIR}).on('close', safe next)
 		step1()
 
 	compile: (opts,next) ->
@@ -138,7 +144,11 @@ actions =
 			# npm publish
 			spawn(NPM, ['publish'], {stdio:'inherit', cwd:APP_DIR}).on 'close', safe next, ->
 				# git tag
-				spawn(GIT, ['tag', 'v'+PACKAGE_DATA.version, '-a'], {stdio:'inherit', cwd:APP_DIR}).on('close', safe next)
+				spawn(GIT, ['tag', 'v'+PACKAGE_DATA.version, '-a'], {stdio:'inherit', cwd:APP_DIR}).on 'close', safe next, ->
+					# git push origin master
+					spawn(GIT, ['push', 'origin', 'master'], {stdio:'inherit', cwd:APP_DIR}).on 'close', safe next, ->
+						# git push tags
+						spawn(GIT, ['push', 'origin', '--tags'], {stdio:'inherit', cwd:APP_DIR}).on('close', safe next)
 
 
 # =====================================

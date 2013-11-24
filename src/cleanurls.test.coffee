@@ -9,6 +9,16 @@ require('docpad').require('testers')
 			env: 'development'
 	)
 	.test(
+			testerName: 'cleanurls development environment'
+			pluginPath: __dirname+'/..'
+			testPath: __dirname+'/../test/development'
+			autoExit: 'safe'
+		,
+			plugins:
+				cleanurls:
+					trailingSlashes: true
+	)
+	.test(
 			testerName: 'cleanurls static environment'
 			pluginPath: __dirname+'/..',
 			testPath: __dirname+'/../test/static'
