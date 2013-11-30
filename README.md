@@ -38,8 +38,24 @@ environments:
 ```
 
 ### trailingSlashes
-
 Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
+
+### collectionName
+You can use this property (defaults to `html`) to tell the cleanurls plugin to use your own custom collection for which documents to apply cleanurls to.
+
+For insstance, if you are wanting to remove all cleanurls for all documents that have `cleanurls: false` in the meta data, then you could do the following in your docpad configuration file:
+
+``` coffee
+# Define a custom collection for cleanurls that ignores the documents we don't want
+collections:
+	cleanurls: ->
+		@getCollection('html').findAllLive(cleanurls: false)
+
+# Tell our clean urls plugin to use this collection
+plugins:
+	cleanurls:
+		collectionName: 'cleanurls'
+```
 
 
 <!-- HISTORY/ -->

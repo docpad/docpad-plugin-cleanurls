@@ -23,6 +23,9 @@ module.exports = (BasePlugin) ->
 
 			trailingSlashes: false
 
+			collectionName: 'html'
+
+
 		# Clean URLs for Document
 		cleanUrlsForDocument: (document) =>
 			# Prepare
@@ -50,7 +53,8 @@ module.exports = (BasePlugin) ->
 		renderBefore: (opts) ->
 			# Prepare
 			docpad = @docpad
-			collection = docpad.getCollection('html')
+			config = @getConfig()
+			collection = docpad.getCollection(config.collectionName)
 
 			# When we get a new document, update its url
 			docpad.log 'debug', 'Applying clean urls'
@@ -66,7 +70,7 @@ module.exports = (BasePlugin) ->
 			config = @config
 			docpad = @docpad
 			docpadConfig = docpad.getConfig()
-			collection = docpad.getCollection('html')
+			collection = docpad.getCollection(collectionName)
 			{TaskGroup} = require('taskgroup')
 			safefs = require('safefs')
 			pathUtil = require('path')
