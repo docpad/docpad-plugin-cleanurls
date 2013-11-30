@@ -1,4 +1,4 @@
-## History
+# History
 
 - v2.6.0 November 30, 2013
 	- Can now specify your own collection to use
