@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cleanurls",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "description": "Adds support for clean urls to DocPad",
   "homepage": "http://docpad.org/plugin/cleanurls",
   "license": {
@@ -23,7 +23,11 @@
   "maintainers": [
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
-  "contributors": [],
+  "contributors": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+    "hurrymaplelad (https://github.com/hurrymaplelad)",
+    "zenorocha (https://github.com/zenorocha)"
+  ],
   "bugs": {
     "url": "https://github.com/docpad/docpad-plugin-cleanurls/issues"
   },
@@ -34,20 +38,22 @@
   "engines": {
     "node": ">=0.4"
   },
+  "peerDependencies": {
+    "docpad": ">=6.3 <7"
+  },
   "dependencies": {
     "safefs": "~3.0.1",
     "taskgroup": "~3.3.2"
   },
   "devDependencies": {
+    "docpad": ">=6.3 <7",
     "coffee-script": "~1.6.2",
     "chai": "~1.8.1",
-    "request": "~2.27.0"
+    "request": "~2.27.0",
+    "projectz": "~0.2.7"
   },
   "main": "./out/cleanurls.plugin.js",
   "scripts": {
     "test": "node ./out/cleanurls.test.js"
-  },
-  "peerDependencies": {
-    "docpad": ">=6.3 <7"
   }
 }

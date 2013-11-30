@@ -1,5 +1,8 @@
 ## History
 
+- v2.6.0 November 30, 2013
+	- Can now specify your own collection to use
+
 - v2.5.2 November 24, 2013
 	- Repackaged
 	- Dependency upgrades

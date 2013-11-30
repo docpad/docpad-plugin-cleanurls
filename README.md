@@ -2,7 +2,7 @@
 
 <!-- BADGES/ -->
 
-[![Build Status](http://img.shields.io/travis-ci/bevry/docpad-plugin-cleanurls.png?branch=master)](http://travis-ci.org/bevry/docpad-plugin-cleanurls "Check this project's build status on TravisCI")
+[![Build Status](http://img.shields.io/travis-ci/docpad/docpad-plugin-cleanurls.png?branch=master)](http://travis-ci.org/docpad/docpad-plugin-cleanurls "Check this project's build status on TravisCI")
 [![NPM version](http://badge.fury.io/js/docpad-plugin-cleanurls.png)](https://npmjs.org/package/docpad-plugin-cleanurls "View this project on NPM")
 [![Gittip donate button](http://img.shields.io/gittip/bevry.png)](https://www.gittip.com/bevry/ "Donate weekly to this project using Gittip")
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
@@ -49,7 +49,7 @@ For insstance, if you are wanting to remove all cleanurls for all documents that
 # Define a custom collection for cleanurls that ignores the documents we don't want
 collections:
 	cleanurls: ->
-		@getCollection('html').findAllLive(cleanurls: false)
+		@getCollection('html').findAllLive(cleanurls: $ne: false)
 
 # Tell our clean urls plugin to use this collection
 plugins:
@@ -61,7 +61,7 @@ plugins:
 <!-- HISTORY/ -->
 
 ## History
-[Discover the change history by heading on over to the `History.md` file.](https://github.com/bevry/docpad-plugin-cleanurls/blob/master/History.md#files)
+[Discover the change history by heading on over to the `History.md` file.](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/History.md#files)
 
 <!-- /HISTORY -->
 
@@ -70,7 +70,7 @@ plugins:
 
 ## Contribute
 
-[Discover how you can contribute by heading on over to the `Contributing.md` file.](https://github.com/bevry/docpad-plugin-cleanurls/blob/master/Contributing.md#files)
+[Discover how you can contribute by heading on over to the `Contributing.md` file.](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/Contributing.md#files)
 
 <!-- /CONTRIBUTE -->
 
@@ -95,8 +95,13 @@ No sponsors yet! Will you be the first?
 
 ### Contributors
 
-No contributors yet! Will you be the first?
-[Discover how you can contribute by heading on over to the `Contributing.md` file.](https://github.com/bevry/docpad-plugin-cleanurls/blob/master/Contributing.md#files)
+These amazing people have contributed code to this project:
+
+- Benjamin Lupton <b@lupton.cc> (https://github.com/balupton) - [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=balupton)
+- hurrymaplelad (https://github.com/hurrymaplelad) - [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=hurrymaplelad)
+- zenorocha (https://github.com/zenorocha) - [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=zenorocha)
+
+[Become a contributor!](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/Contributing.md#files)
 
 <!-- /BACKERS -->
 
@@ -108,7 +113,7 @@ No contributors yet! Will you be the first?
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/)
 
 Copyright &copy; 2012+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)
-<br/>Copyright &copy; 2011 Benjamin Lupton <b@lupton.cc) (http://balupton.com)
+<br/>Copyright &copy; 2011 Benjamin Lupton <b@lupton.cc> (http://balupton.com)
 
 <!-- /LICENSE -->
 
