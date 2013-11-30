@@ -25,11 +25,11 @@
   ],
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/bevry/docpad-extras/issues"
+    "url": "https://github.com/docpad/docpad-plugin-cleanurls/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bevry/docpad-extras.git"
+    "url": "https://github.com/docpad/docpad-plugin-cleanurls.git"
   },
   "engines": {
     "node": ">=0.4"
