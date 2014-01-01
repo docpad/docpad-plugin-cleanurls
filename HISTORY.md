@@ -1,5 +1,9 @@
 # History
 
+- v2.6.1 January 1, 2014
+	- Added canonical link relationship for redirect to reduce duplicate content in search engines (regression since always)
+		- Thanks to [David Boyer](https://github.com/misterdai) for [pull request #11](https://github.com/docpad/docpad-plugin-cleanurls/pull/11)
+
 - v2.6.0 November 30, 2013
 	- Can now specify your own collection to use
 
