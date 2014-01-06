@@ -43,7 +43,7 @@ environments:
 Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
 ### collectionName
-You can use this property (defaults to `html`) to apply cleanurls to a custom collection only.
+You can use this property (defaults to `html`) to apply cleanurls to a custom collection.
 
 For instance, if you are wanting to exclude all documents that have `cleanurls: false` in the meta data, then add the following to your docpad configuration file:
 
