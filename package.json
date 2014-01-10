@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cleanurls",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "description": "Adds support for clean urls to DocPad",
   "homepage": "http://docpad.org/plugin/cleanurls",
   "license": {
@@ -59,8 +59,5 @@
   "main": "./out/cleanurls.plugin.js",
   "scripts": {
     "test": "node ./out/cleanurls.test.js"
-  },
-  "cakeConfiguration": {
-    "COFFEE_SRC_PATH": "src"
   }
 }
