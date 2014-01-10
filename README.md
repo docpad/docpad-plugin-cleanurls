@@ -4,9 +4,12 @@
 
 [![Build Status](http://img.shields.io/travis-ci/docpad/docpad-plugin-cleanurls.png?branch=master)](http://travis-ci.org/docpad/docpad-plugin-cleanurls "Check this project's build status on TravisCI")
 [![NPM version](http://badge.fury.io/js/docpad-plugin-cleanurls.png)](https://npmjs.org/package/docpad-plugin-cleanurls "View this project on NPM")
-[![Gittip donate button](http://img.shields.io/gittip/bevry.png)](https://www.gittip.com/bevry/ "Donate weekly to this project using Gittip")
+[![Dependency Status](https://david-dm.org/docpad/docpad-plugin-cleanurls.png?theme=shields.io)](https://david-dm.org/docpad/docpad-plugin-cleanurls)
+[![Development Dependency Status](https://david-dm.org/docpad/docpad-plugin-cleanurls/dev-status.png?theme=shields.io)](https://david-dm.org/docpad/docpad-plugin-cleanurls#info=devDependencies)<br/>
+[![Gittip donate button](http://img.shields.io/gittip/docpad.png)](https://www.gittip.com/docpad/ "Donate weekly to this project using Gittip")
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
+[![BitCoin donate button](http://img.shields.io/bitcoin/donate.png?color=yellow)](https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a "Donate once-off to this project using BitCoin")
 
 <!-- /BADGES -->
 
@@ -61,7 +64,7 @@ plugins:
 <!-- HISTORY/ -->
 
 ## History
-[Discover the change history by heading on over to the `History.md` file.](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/History.md#files)
+[Discover the change history by heading on over to the `HISTORY.md` file.](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/HISTORY.md#files)
 
 <!-- /HISTORY -->
 
@@ -70,7 +73,7 @@ plugins:
 
 ## Contribute
 
-[Discover how you can contribute by heading on over to the `Contributing.md` file.](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/Contributing.md#files)
+[Discover how you can contribute by heading on over to the `CONTRIBUTING.md` file.](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/CONTRIBUTING.md#files)
 
 <!-- /CONTRIBUTE -->
 
@@ -89,19 +92,21 @@ These amazing people are maintaining this project:
 
 No sponsors yet! Will you be the first?
 
-[![Gittip donate button](http://img.shields.io/gittip/bevry.png)](https://www.gittip.com/bevry/ "Donate weekly to this project using Gittip")
+[![Gittip donate button](http://img.shields.io/gittip/docpad.png)](https://www.gittip.com/docpad/ "Donate weekly to this project using Gittip")
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
+[![BitCoin donate button](http://img.shields.io/bitcoin/donate.png?color=yellow)](https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a "Donate once-off to this project using BitCoin")
 
 ### Contributors
 
 These amazing people have contributed code to this project:
 
-- Benjamin Lupton <b@lupton.cc> (https://github.com/balupton) - [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=balupton)
-- hurrymaplelad (https://github.com/hurrymaplelad) - [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=hurrymaplelad)
-- zenorocha (https://github.com/zenorocha) - [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=zenorocha)
+- [Benjamin Lupton](https://github.com/balupton) <b@lupton.cc> — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=balupton)
+- [hurrymaplelad](https://github.com/hurrymaplelad) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=hurrymaplelad)
+- [misterdai](https://github.com/misterdai) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=misterdai)
+- [zenorocha](https://github.com/zenorocha) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=zenorocha)
 
-[Become a contributor!](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/Contributing.md#files)
+[Become a contributor!](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/CONTRIBUTING.md#files)
 
 <!-- /BACKERS -->
 

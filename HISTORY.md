@@ -1,28 +1,31 @@
 # History
 
+- v2.6.1 January 10, 2014
+	- Updated dependencies
+
 - v2.6.0 November 30, 2013
 	- Can now specify your own collection to use
 
 - v2.5.2 November 24, 2013
 	- Repackaged
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.5.1 August 20, 2013
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.5.0 June 12, 2013
 	- Optionally generate document urls with trailing slashes
 		- Thanks to [Adam Hull](https://github.com/hurrymaplelad) for [pull request #4](https://github.com/docpad/docpad-plugin-cleanurls/pull/4)
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.4.3 April 5, 2013
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.4.2 April 1, 2013
-	- Dependency upgrades
+	- Updated dependencies
 
 - v2.4.1 March 6, 2013
-	- Dependency upgrades
+	- Updated dependencies
 		-  `bal-util` from ~1.15.3 to ~1.16.8
 		-  `coffee-script` from 1.4.x to ~1.4.0
 
