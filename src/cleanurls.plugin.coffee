@@ -83,7 +83,7 @@ module.exports = (BasePlugin) ->
 					pathUtil.join(docpadConfig.outPath, url.replace(/\.html$/,'')+'/index.html')
 
 			# Static
-			if 'static' in docpad.getEnvironments()
+			if 'static' in docpad.getEnvironments() or config.staticServer?
 				# Tasks
 				docpad.log 'debug', 'Writing static clean url files'
 				tasks = new TaskGroup().setConfig(concurrency:0).once 'complete', (err) ->
