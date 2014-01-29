@@ -26,9 +26,11 @@ docpad install cleanurls
 
 ## Usage/Configure
 
-For non-static environments we will set the document's url to it's clean url. This means that our document is still outputted to the same place on the file system as the clean url stuff is handled by the web server instead. This is the default.
+For non-static environments the document's url is set to its clean url by docpad (The document is still rendered to the same location on the file system). 
 
-For static environments we will set the document's `outPath` to that of a directory with a `index.html` file (e.g. `pages/welcome.html` will be outputted to `pages/welcome/index.html`). You can tell docpad to use the static environment by adding `--env static` to the end of your DocPad command, so to perform a one off generation for a static environment you'll run `docpad generate --env static`, to perform your usual generate, serve and watch it'll be `docpad run --env static`.
+For static environments the document's `outPath` is set to that of a directory with a `index.html` file (e.g. `pages/welcome.html` will be outputted to `pages/welcome/index.html`). You can tell docpad to use the static environment by adding `--env static` to the end of your DocPad command. 
+
+To perform a one off generation for a static environment run `docpad generate --env static`.   To generate, serve and watch run `docpad run --env static`.
 
 If you'd like to disable the static mode when working in the static environment you can add the following to your [docpad configuration file](http://docpad.org/docs/config).
 
@@ -44,12 +46,12 @@ environments:
 Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
 ### collectionName
-You can use this property (defaults to `html`) to tell the cleanurls plugin to use your own custom collection for which documents to apply cleanurls to.
+You can use this property (defaults to `html`) to apply cleanurls to a custom collection.
 
-For insstance, if you are wanting to remove all cleanurls for all documents that have `cleanurls: false` in the meta data, then you could do the following in your docpad configuration file:
+For instance, if you are wanting to exclude all documents that have `cleanurls: false` in the meta data, then add the following to your docpad configuration file:
 
 ``` coffee
-# Define a custom collection for cleanurls that ignores the documents we don't want
+# Define a custom collection for cleanurls 
 collections:
 	cleanurls: ->
 		@getCollection('html').findAllLive(cleanurls: $ne: false)
