@@ -26,6 +26,12 @@ module.exports = (BasePlugin) ->
 
 			collectionName: 'html'
 
+			static: false
+
+			environments:
+				static:
+					static: true
+
 
 		# Clean URLs for Document
 		cleanUrlsForDocument: (document) =>
@@ -59,7 +65,7 @@ module.exports = (BasePlugin) ->
 
 			# When we get a new document, update its url
 			docpad.log 'debug', 'Applying clean urls'
-			collection.forEach @cleanUrlsForDocument
+			collection.forEach(@cleanUrlsForDocument)
 			docpad.log 'debug', 'Applied clean urls'
 
 			# All done
@@ -83,7 +89,7 @@ module.exports = (BasePlugin) ->
 					pathUtil.join(docpadConfig.outPath, url.replace(/\.html$/,'')+'/index.html')
 
 			# Static
-			if 'static' in docpad.getEnvironments() or config.staticServer?
+			if config.static is true
 				# Tasks
 				docpad.log 'debug', 'Writing static clean url files'
 				tasks = new TaskGroup().setConfig(concurrency:0).once 'complete', (err) ->

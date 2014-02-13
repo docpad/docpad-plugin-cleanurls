@@ -10,6 +10,7 @@
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
 [![BitCoin donate button](http://img.shields.io/bitcoin/donate.png?color=yellow)](https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a "Donate once-off to this project using BitCoin")
+[![Wishlist browse button](http://img.shields.io/wishlist/browse.png?color=yellow)](http://amzn.com/w/2F8TXKSNAFG4V "Buy an item on our wishlist for us")
 
 <!-- /BADGES -->
 
@@ -26,33 +27,38 @@ docpad install cleanurls
 
 ## Usage/Configure
 
-For non-static environments we will set the document's url to it's clean url. This means that our document is still outputted to the same place on the file system as the clean url stuff is handled by the web server instead. This is the default.
 
-For static environments we will set the document's `outPath` to that of a directory with a `index.html` file (e.g. `pages/welcome.html` will be outputted to `pages/welcome/index.html`). You can tell docpad to use the static environment by adding `--env static` to the end of your DocPad command, so to perform a one off generation for a static environment you'll run `docpad generate --env static`, to perform your usual generate, serve and watch it'll be `docpad run --env static`. 
+### `static`
 
-If you'd like to disable the static mode when working in the static environment you can add the following to your [docpad configuration file](http://docpad.org/docs/config).
+In non-static environments we work by setting the document's url to it's clean url. This means that redirection occurs on the dynamic server level.
+
+For the `static` environment (i.e. when running docpad with the `--env static` flag, e.g. running `docpad generate --env static`) we will set the `static` plugin configuration option to `true`. This will in addition to performing redirections via the built-in dynamic server within DocPad for speed, we will also write special static redirection HTML files to the output directory, that will redirect the user to the new clean location (e.g. the document `pages/welcome.html` will not we outputted to `pages/welcome/index.html`, with `pages/welcome.html` now being a special HTML redirect document to the clean location).
+
+If you would like to always use the static mode, you can set the `static` plugin configuration option to true by doing:
+
+``` coffee
+plugins:
+	cleanurls:
+		static: true
+```
+
+If you would like to disable the static mode for the static environment, you can do so by doing:
 
 ``` coffee
 environments:
 	static:
 		plugins:
 			cleanurls:
-				enabled: false
+				static: false
 ```
 
-If using a custom static server, you can set the staticServer option to true, as well.
 
-``` coffee
-plugins:
-	cleanurls:
-		staticServer: true
-```
+### `trailingSlashes`
+Enable this plugin configuration option to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
-### trailingSlashes
-Enable to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
-### collectionName
-You can use this property (defaults to `html`) to tell the cleanurls plugin to use your own custom collection for which documents to apply cleanurls to.
+### `collectionName`
+You can use this plugin configuration option (defaults to `html`) to tell the cleanurls plugin to use your own custom collection for which documents to apply cleanurls to.
 
 For insstance, if you are wanting to remove all cleanurls for all documents that have `cleanurls: false` in the meta data, then you could do the following in your docpad configuration file:
 
@@ -104,6 +110,7 @@ No sponsors yet! Will you be the first?
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
 [![BitCoin donate button](http://img.shields.io/bitcoin/donate.png?color=yellow)](https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a "Donate once-off to this project using BitCoin")
+[![Wishlist browse button](http://img.shields.io/wishlist/browse.png?color=yellow)](http://amzn.com/w/2F8TXKSNAFG4V "Buy an item on our wishlist for us")
 
 ### Contributors
 
@@ -112,6 +119,8 @@ These amazing people have contributed code to this project:
 - [Benjamin Lupton](https://github.com/balupton) <b@lupton.cc> — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=balupton)
 - [hurrymaplelad](https://github.com/hurrymaplelad) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=hurrymaplelad)
 - [misterdai](https://github.com/misterdai) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=misterdai)
+- [RobLoach](https://github.com/RobLoach) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=RobLoach)
+- [stongo](https://github.com/stongo) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=stongo)
 - [zenorocha](https://github.com/zenorocha) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=zenorocha)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/CONTRIBUTING.md#files)

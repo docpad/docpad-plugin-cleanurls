@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cleanurls",
-  "version": "2.6.2",
+  "version": "2.7.0",
   "description": "Adds support for clean urls to DocPad",
   "homepage": "http://docpad.org/plugin/cleanurls",
   "license": {
@@ -14,7 +14,8 @@
     "gittip": "docpad",
     "flattr": "344188/balupton-on-Flattr",
     "paypal": "QB8GQPZAH84N6",
-    "bitcoin": "https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a"
+    "bitcoin": "https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a",
+    "wishlist": "http://amzn.com/w/2F8TXKSNAFG4V"
   },
   "keywords": [
     "docpad",
@@ -30,6 +31,8 @@
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
     "hurrymaplelad (https://github.com/hurrymaplelad)",
     "misterdai (https://github.com/misterdai)",
+    "RobLoach (https://github.com/RobLoach)",
+    "stongo (https://github.com/stongo)",
     "zenorocha (https://github.com/zenorocha)"
   ],
   "bugs": {
@@ -51,10 +54,10 @@
   },
   "devDependencies": {
     "docpad": ">=6.3 <7",
-    "coffee-script": "~1.6.2",
-    "chai": "~1.8.1",
-    "request": "~2.31.0",
-    "projectz": "~0.3.9"
+    "coffee-script": "~1.7.1",
+    "chai": "~1.9.0",
+    "request": "~2.33.0",
+    "projectz": "~0.3.10"
   },
   "main": "./out/cleanurls.plugin.js",
   "scripts": {

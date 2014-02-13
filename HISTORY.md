@@ -1,5 +1,8 @@
 # History
 
+- v2.7.0 February 13, 2014
+	- Static mode is now a configuration option that is enabled by default in the static environment
+
 - v2.6.2 January 10, 2014
 	- Updated dependencies
 
