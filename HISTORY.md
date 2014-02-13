@@ -1,10 +1,5 @@
 # History
 
-- v2.6.3 February 12th, 2014
-	- Updated dependencies
-	- Added a staticServer plugin config option
-		- Thanks to [Marcus Stong](https://github.com/stongo) for [pull request #787](https://github.com/docpad/docpad-plugin-cleanurls/pull/14)
-
 - v2.6.2 January 10, 2014
 	- Updated dependencies
 
