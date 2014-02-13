@@ -2,6 +2,7 @@
 
 - v2.7.0 February 13, 2014
 	- Static mode is now a configuration option that is enabled by default in the static environment
+		- Thanks to [Marcus Stong](https://github.com/stongo) and [Millicent Billette](https://github.com/GammaNu) for issues [#16](https://github.com/docpad/docpad-plugin-cleanurls/issues/16), [#14](https://github.com/docpad/docpad-plugin-cleanurls/pull/14), and [#5](https://github.com/docpad/docpad-plugin-cleanurls/issues/5)
 
 - v2.6.2 January 10, 2014
 	- Updated dependencies
