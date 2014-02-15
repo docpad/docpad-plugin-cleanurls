@@ -34,7 +34,7 @@ In non-static environments we work by setting the document's url to it's clean u
 
 For the `static` environment (i.e. when running docpad with the `--env static` flag, e.g. running `docpad generate --env static`) we will set the `static` plugin configuration option to `true`. This will in addition to performing redirections via the built-in dynamic server within DocPad for speed, we will also write special static redirection HTML files to the output directory, that will redirect the user to the new clean location (e.g. the document `pages/welcome.html` will not we outputted to `pages/welcome/index.html`, with `pages/welcome.html` now being a special HTML redirect document to the clean location).
 
-If you would like to always use the static mode, you can set the `static` plugin configuration option to true by doing:
+If you would like to always use the static mode, you can set the `static` plugin configuration option to true with:
 
 ``` coffee
 plugins:
@@ -42,7 +42,7 @@ plugins:
 		static: true
 ```
 
-If you would like to disable the static mode for the static environment, you can do so by doing:
+If you would like to disable the static mode for the static environment, you can do so with:
 
 ``` coffee
 environments:
@@ -50,6 +50,17 @@ environments:
 		plugins:
 			cleanurls:
 				static: false
+```
+
+If you would like to disable clean urls completely (not just the static mode) in the static environment, you can do so with:
+
+
+``` coffee
+environments:
+	static:
+		plugins:
+			cleanurls:
+				enabled: false
 ```
 
 
