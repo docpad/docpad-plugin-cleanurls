@@ -32,7 +32,7 @@ docpad install cleanurls
 
 In non-static environments we work by setting the document's url to it's clean url. This means that redirection occurs on the dynamic server level.
 
-For the `static` environment (i.e. when running docpad with the `--env static` flag, e.g. running `docpad generate --env static`) we will set the `static` plugin configuration option to `true`. This will in addition to performing redirections via the built-in dynamic server within DocPad for speed, we will also write special static redirection HTML files to the output directory, that will redirect the user to the new clean location (e.g. the document `pages/welcome.html` will not we outputted to `pages/welcome/index.html`, with `pages/welcome.html` now being a special HTML redirect document to the clean location).
+For the `static` environment (i.e. when running docpad with the `--env static` flag, e.g. running `docpad generate --env static`) we will set the `static` plugin configuration option to `true`. This will in addition to performing redirections via the built-in dynamic server within DocPad for speed, we will also write special static redirection HTML files to the output directory, that will redirect the user to the new clean location (e.g. the document `pages/welcome.html` will now be outputted to `pages/welcome/index.html`, with `pages/welcome.html` now being a special HTML redirect document to the clean location).
 
 If you would like to always use the static mode, you can set the `static` plugin configuration option to true with:
 
