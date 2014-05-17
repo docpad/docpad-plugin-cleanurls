@@ -30,6 +30,7 @@
   "contributors": [
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
     "hurrymaplelad (https://github.com/hurrymaplelad)",
+    "iSpyCreativity (https://github.com/iSpyCreativity)",
     "misterdai (https://github.com/misterdai)",
     "RobLoach (https://github.com/RobLoach)",
     "stongo (https://github.com/stongo)",
@@ -57,10 +58,13 @@
     "coffee-script": "~1.7.1",
     "chai": "~1.9.0",
     "request": "~2.33.0",
-    "projectz": "~0.3.10"
+    "projectz": "~0.3.11"
   },
   "main": "./out/cleanurls.plugin.js",
   "scripts": {
     "test": "node ./out/cleanurls.test.js"
+  },
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
   }
 }
