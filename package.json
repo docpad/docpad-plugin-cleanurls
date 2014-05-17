@@ -58,7 +58,7 @@
     "coffee-script": "~1.7.1",
     "chai": "~1.9.0",
     "request": "~2.33.0",
-    "projectz": "~0.3.11"
+    "projectz": "~0.3.13"
   },
   "main": "./out/cleanurls.plugin.js",
   "scripts": {
