@@ -13,7 +13,7 @@ module.exports = (BasePlugin) ->
 				<html>
 					<head>
 						<title>#{document.get('title') or 'Redirect'}</title>
-						<meta http-equiv="REFRESH" content="0;url=#{document.get('url')}">
+						<meta http-equiv="REFRESH" content="0; url=#{document.get('url')}">
 						<link rel="canonical" href="#{document.get('url')}" />
 					</head>
 					<body>
