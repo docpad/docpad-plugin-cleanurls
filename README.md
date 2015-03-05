@@ -134,6 +134,7 @@ These amazing people have contributed code to this project:
 - [misterdai](https://github.com/misterdai) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=misterdai)
 - [RobLoach](https://github.com/RobLoach) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=RobLoach)
 - [stongo](https://github.com/stongo) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=stongo)
+- [StormPooper](https://github.com/StormPooper) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=StormPooper)
 - [StudioLE](https://github.com/StudioLE) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=StudioLE)
 - [zenorocha](https://github.com/zenorocha) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=zenorocha)
 
@@ -146,10 +147,14 @@ These amazing people have contributed code to this project:
 
 ## License
 
-Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/)
+Unless stated otherwise all works are:
 
-Copyright &copy; 2012+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)
-<br/>Copyright &copy; 2011 Benjamin Lupton <b@lupton.cc> (http://balupton.com)
+- Copyright &copy; 2012+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)
+- Copyright &copy; 2011 Benjamin Lupton <b@lupton.cc> (http://balupton.com)
+
+and licensed under:
+
+- The incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://opensource.org/licenses/mit-license.php)
 
 <!-- /LICENSE -->
 
