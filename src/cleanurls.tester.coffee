@@ -45,7 +45,7 @@ module.exports = (testers) ->
 					done()
 																						
 						
-				test 'documents should have alternate urls WITH extensions: /subdir', (done) ->
+				test 'documents should have alternate urls WITH extensions', (done) ->
 					
 					doc = tester.docpad.getCollection('documents').findOne(relativeDirPath: 'subdir')
 
