@@ -23,6 +23,7 @@ module.exports = (testers) ->
 				baseUrl = "http://localhost:#{tester.docpad.config.port}"
 				outExpectedPath = tester.config.outExpectedPath
 				fileUrl = "#{baseUrl}/welcome/"
+				trailingSlashes = tester.docpad.getPlugin('cleanurls').getConfig().trailingSlashes
 
 				test 'server should serve URLs without an extension', (done) ->
 					request fileUrl, (err,response,actual) ->
@@ -35,10 +36,25 @@ module.exports = (testers) ->
 				test 'documents should have urls without extensions', (done) ->
 					actualUrls = tester.docpad.getCollection('documents').map (doc) -> doc.get('url')
 
-					if tester.docpad.getPlugin('cleanurls').getConfig().trailingSlashes
-						expectedUrls = ['/', '/hi', '/welcome/']
+					if trailingSlashes
+						expectedUrls = ['/', '/hi', '/subdir/', '/welcome/']
 					else
-						expectedUrls = ['/', '/hi', '/welcome']
+						expectedUrls = ['/', '/hi','/subdir', '/welcome']
 
 					expect(actualUrls.sort()).to.deep.equal(expectedUrls)
+					done()
+																						
+						
+				test 'documents should have alternate urls WITH extensions', (done) ->
+					
+					doc = tester.docpad.getCollection('documents').findOne(relativeDirPath: 'subdir')
+
+					if trailingSlashes
+						expectedUrl = '/subdir'
+					else
+						expectedUrl = "/subdir/"
+						
+					urls = doc.get('urls')
+
+					expect(urls).to.include(expectedUrl)
 					done()

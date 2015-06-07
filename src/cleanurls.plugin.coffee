@@ -46,6 +46,8 @@ module.exports = (BasePlugin) ->
 				if trailingSlashes and relativeDirUrl isnt '/'
 					relativeDirUrl += '/'
 				document.setUrl(relativeDirUrl)
+				if relativeDirUrl isnt '/'
+					document.addUrl(if trailingSlashes then relativeDirUrl.replace(/\/$/,'') else relativeDirUrl+'/')
 
 			# Create Extensionless URL
 			else if /\.html$/i.test(url)
