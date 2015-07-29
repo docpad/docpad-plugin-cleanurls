@@ -1,27 +1,45 @@
 # Test our plugin using DocPad's Testers
 require('docpad').require('testers')
 	.test(
+		# Test Configuration
+		{
 			testerName: 'cleanurls development environment'
 			pluginPath: __dirname+'/..'
-			testPath: __dirname+'/../test/development'
-			autoExit: 'safe'
-		,
+			removeWhitespace: true
+		},
+
+		# DocPad Configuration
+		{
 			env: 'development'
+		}
 	)
 	.test(
-			testerName: 'cleanurls development environment'
+		# Test Configuration
+		{
+			testerName: 'cleanurls development environment with trailing slashes'
 			pluginPath: __dirname+'/..'
-			testPath: __dirname+'/../test/development'
-			autoExit: 'safe'
-		,
+			removeWhitespace: true
+		},
+
+		# DocPad Configuration
+		{
+			env: 'development'
 			plugins:
 				cleanurls:
 					trailingSlashes: true
+		}
 	)
 	.test(
+		# Test Configuration
+		{
 			testerName: 'cleanurls static environment'
-			pluginPath: __dirname+'/..',
-			testPath: __dirname+'/../test/static'
-		,
+			pluginPath: __dirname+'/..'
+			outExpectedPath: __dirname+'/../test/out-expected-static'
+			removeWhitespace: true
+		},
+
+		# DocPad Configuration
+		{
 			env: 'static'
+		}
 	)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.78.1" />
+
+	<!-- DocPad Styles -->
+	
+</head>
+<body>
+	Page Not Found 404!
+
+	<!-- DocPad Scripts -->
+	<script >(function(){
+	var advancedRedirects = [[/^\/(?:g|gh|github|project)(?:\/(.*))?$/, "https://github.com/bevry/$1"]];
+	var relativeURL = location.pathname + (location.search || '');
+	var absoluteURL = location.href;
+	advancedRedirects.forEach(function(value){
+		var pattern = value[0], replacement = value[1], sourceURL, targetURL;
+		if ( typeof pattern === 'string' ) {
+			if ( pattern === relativeURL || pattern === absoluteURL ) {
+				document.location.href = replacement;
+			}
+		}
+		else {
+			if ( pattern.test(sourceURL = relativeURL) || pattern.test(sourceURL = absoluteURL) ) {
+				targetURL = sourceURL.replace(pattern, replacement);
+				document.location.href = targetURL;
+			}
+		}
+	})
+})()</script>
+</body>
+</html>

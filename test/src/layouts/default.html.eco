@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- DocPad Meta -->
+	<%- @getBlock('meta').toHTML() %>
+
+	<!-- DocPad Styles -->
+	<%- @getBlock('styles').toHTML() %>
+</head>
+<body>
+	<%- @content %>
+
+	<!-- DocPad Scripts -->
+	<%- @getBlock('scripts').toHTML() %>
+</body>
+</html>
