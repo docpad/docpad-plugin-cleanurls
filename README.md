@@ -217,6 +217,7 @@ These amazing people have contributed code to this project:
 - [stongo](https://github.com/stongo) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=stongo)
 - [StormPooper](https://github.com/StormPooper) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=StormPooper)
 - [StudioLE](https://github.com/StudioLE) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=StudioLE)
+- [vsopvsop](https://github.com/vsopvsop) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=vsopvsop)
 - [zenorocha](https://github.com/zenorocha) — [view contributions](https://github.com/docpad/docpad-plugin-cleanurls/commits?author=zenorocha)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-cleanurls/blob/master/CONTRIBUTING.md#files)

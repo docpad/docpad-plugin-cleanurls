@@ -169,7 +169,7 @@ module.exports = (BasePlugin) ->
 				# Cycle documents
 				collection.forEach (document) ->
 					# Check
-					return  if document.get('write') is false or document.get('ignore') is true or document.get('render') is false or document.get('filename') is '404.html'
+					return  if document.get('write') is false or document.get('ignore') is true or document.get('render') is false or document.get('url') is '/404'
 
 					# Prepare
 					encoding = document.get('encoding')

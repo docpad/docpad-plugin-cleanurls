@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cleanurls",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "description": "Adds support for clean urls to DocPad",
   "homepage": "http://docpad.org/plugin/cleanurls",
   "license": {
@@ -37,6 +37,7 @@
     "stongo (https://github.com/stongo)",
     "StormPooper (https://github.com/StormPooper)",
     "StudioLE (https://github.com/StudioLE)",
+    "vsopvsop (https://github.com/vsopvsop)",
     "zenorocha (https://github.com/zenorocha)"
   ],
   "bugs": {

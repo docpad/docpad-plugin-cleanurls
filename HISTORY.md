@@ -1,5 +1,8 @@
 # History
 
+## v2.8.1 July 30, 2015
+- Fixed 404 pages having clean URLs applied
+
 ## v2.8.0 July 30, 2015
 - Added the options `simpleRedirects`, `advancedRedirects` and `getRedirectScript`
 	- These allow you to perform custom redirections on both dynamic and static environments
