@@ -1,4 +1,5 @@
 module.exports =
+	poweredByDocPad: false
 	plugins:
 		cleanurls:
 			simpleRedirects:
