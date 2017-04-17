@@ -135,9 +135,13 @@ module.exports = (BasePlugin) ->
 			docpadConfig = docpad.getConfig()
 			siteURL = docpadConfig.site?.url or ''
 			collection = docpad.getCollection(config.collectionName)
-			TaskGroup = require('taskgroup')
+
+			# Import
+			{TaskGroup} = require('taskgroup')
 			safefs = require('safefs')
 			pathUtil = require('path')
+
+			# Helper
 			getCleanOutPathFromUrl = (url) ->
 				url = url.replace(/\/+$/,'')  # trim trailing slashes
 				if /index.html$/.test(url)

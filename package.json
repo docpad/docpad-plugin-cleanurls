@@ -89,8 +89,8 @@
   ],
   "main": "es5/cleanurls.plugin.js",
   "dependencies": {
-    "safefs": "^3.1.0",
-    "taskgroup": "^4.3.0"
+    "safefs": "^4.1.0",
+    "taskgroup": "^5.0.1"
   },
   "devDependencies": {
     "assert-helpers": "^4.5.0",
