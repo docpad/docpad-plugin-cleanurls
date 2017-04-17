@@ -1,7 +1,7 @@
 {
   "title": "Clean URLs Plugin for DocPad",
   "name": "docpad-plugin-cleanurls",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "Adds support for clean URLs to DocPad",
   "homepage": "https://github.com/docpad/docpad-plugin-cleanurls",
   "license": "MIT",
