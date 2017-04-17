@@ -1,5 +1,8 @@
 # History
 
+## v2.9.0 2017 April 17
+- Updated base files
+
 ## v2.8.1 2015 July 30
 - Fixed 404 pages having clean URLs applied
 

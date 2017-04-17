@@ -1,4 +1,9 @@
-# Clean URLs Plugin for [DocPad](https://docpad.org)
+<!-- TITLE/ -->
+
+<h1>Clean URLs Plugin for DocPad</h1>
+
+<!-- /TITLE -->
+
 
 <!-- BADGES/ -->
 
@@ -21,17 +26,23 @@
 <!-- /BADGES -->
 
 
-Adds support for clean URLs to [DocPad](https://docpad.org)
+<!-- DESCRIPTION/ -->
+
+Adds support for clean URLs to DocPad
+
+<!-- /DESCRIPTION -->
 
 
-## Install
+<!-- INSTALL/ -->
 
-```
-docpad install cleanurls
-```
+<h2>Install</h2>
+
+Install this DocPad plugin by entering <code>docpad install cleanurls</code> into your terminal.
+
+<!-- /INSTALL -->
 
 
-## Usage/Configure
+## Usage
 
 
 ### `static`
