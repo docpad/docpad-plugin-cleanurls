@@ -1,3 +1,8 @@
+# Import
+{TaskGroup} = require('taskgroup')
+safefs = require('safefs')
+pathUtil = require('path')
+
 # Export Plugin
 module.exports = (BasePlugin) ->
 	# Define Plugin
@@ -72,7 +77,6 @@ module.exports = (BasePlugin) ->
 		cleanUrlsForDocument: (document) =>
 			# Prepare
 			url = document.get('url')
-			pathUtil = require('path')
 			trailingSlashes = @config.trailingSlashes
 
 			# Index URL
@@ -136,11 +140,6 @@ module.exports = (BasePlugin) ->
 			siteURL = docpadConfig.site?.url or ''
 			collection = docpad.getCollection(config.collectionName)
 
-			# Import
-			{TaskGroup} = require('taskgroup')
-			safefs = require('safefs')
-			pathUtil = require('path')
-
 			# Helper
 			getCleanOutPathFromUrl = (url) ->
 				url = url.replace(/\/+$/,'')  # trim trailing slashes
@@ -153,7 +152,7 @@ module.exports = (BasePlugin) ->
 			if config.static is true
 				# Tasks
 				docpad.log 'debug', 'Writing static clean url files'
-				tasks = new TaskGroup().setConfig(concurrency:0).done (err) ->
+				tasks = TaskGroup.create(concurrency:0).done (err) ->
 					docpad.log 'debug', 'Wrote static clean url files'
 					return next(err)
 				addWriteTask = (outPath, outContent) ->
@@ -165,7 +164,7 @@ module.exports = (BasePlugin) ->
 					for own sourceURL,destinationURL of config.simpleRedirects
 						sourceURLPath = getCleanOutPathFromUrl(sourceURL)
 						destinationFullUrl = destinationURL
-						if destinationURL[0] = '/'
+						if destinationURL[0] is '/'
 							destinationFullUrl = siteURL + destinationURL
 						redirectContent = config.getRedirectTemplate.call(plugin, destinationFullUrl)
 						addWriteTask(sourceURLPath, redirectContent)

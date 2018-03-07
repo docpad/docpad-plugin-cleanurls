@@ -1,7 +1,7 @@
 {
-	"name": "docpad-plugin-cleanurls-testsite",
-	"version": "0.1.0",
-	"private": true,
+  "name": "docpad-plugin-cleanurls-testsite",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "docpad-plugin-eco": "2"
   }

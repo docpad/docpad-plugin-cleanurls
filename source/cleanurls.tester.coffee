@@ -11,11 +11,11 @@ module.exports = (testers) ->
 
 		# Custom test for the server
 		testServer: (next) ->
+			# Create the server
+			super(next)
+
 			# Prepare
 			tester = @
-
-			# Create the server
-			super
 
 			# Test
 			@suite 'cleanurls', (suite,test) ->
