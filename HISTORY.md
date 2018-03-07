@@ -1,5 +1,11 @@
 # History
 
+## v2.11.0 2018 March 7
+- Fixed an issue with cycling redirects
+- Now compiled with CoffeeScript v2
+- Updated dependencies
+- Updated base files
+
 ## v2.10.0 2017 April 17
 - Updated dependencies
 
