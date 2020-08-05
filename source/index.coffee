@@ -135,7 +135,7 @@ module.exports = (BasePlugin) ->
 			# Prepare
 			plugin = @
 			docpad = @docpad
-			const outPath = docpad.getPath('outPath')
+			outPath = docpad.getPath('outPath')
 			config = @getConfig()
 			docpadConfig = docpad.getConfig()
 			siteURL = docpadConfig.site?.url or ''
