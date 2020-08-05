@@ -135,6 +135,7 @@ module.exports = (BasePlugin) ->
 			# Prepare
 			plugin = @
 			docpad = @docpad
+			const outPath = docpad.getPath('outPath')
 			config = @getConfig()
 			docpadConfig = docpad.getConfig()
 			siteURL = docpadConfig.site?.url or ''
@@ -144,9 +145,9 @@ module.exports = (BasePlugin) ->
 			getCleanOutPathFromUrl = (url) ->
 				url = url.replace(/\/+$/,'')  # trim trailing slashes
 				if /index.html$/.test(url)
-					pathUtil.join(docpadConfig.outPath, url)
+					pathUtil.join(outPath, url)
 				else
-					pathUtil.join(docpadConfig.outPath, url.replace(/\.html$/,'')+'/index.html')
+					pathUtil.join(outPath, url.replace(/\.html$/,'')+'/index.html')
 
 			# Static
 			if config.static is true
