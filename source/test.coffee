@@ -1,10 +1,9 @@
 # Test our plugin using DocPad's Testers
-require('docpad').require('testers')
+require('docpad-plugintester')
 	.test(
 		{
 			# Test Configuration
 			testerName: 'cleanurls development environment'
-			pluginPath: __dirname+'/..'
 			removeWhitespace: true
 		},
 		{
@@ -16,7 +15,6 @@ require('docpad').require('testers')
 		{
 			# Test Configuration
 			testerName: 'cleanurls development environment with trailing slashes'
-			pluginPath: __dirname+'/..'
 			removeWhitespace: true
 		},
 		{
@@ -31,7 +29,6 @@ require('docpad').require('testers')
 		{
 			# Test Configuration
 			testerName: 'cleanurls static environment'
-			pluginPath: __dirname+'/..'
 			outExpectedPath: __dirname+'/../test/out-expected-static'
 			removeWhitespace: true
 		},
