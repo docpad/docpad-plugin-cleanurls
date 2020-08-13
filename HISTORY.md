@@ -1,5 +1,10 @@
 # History
 
+## v2.12.1 2020 August 13
+
+-   Proper implementation of v2.12, however the tests are still failing so...
+-   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
+
 ## v2.12.0 2020 August 5
 
 -   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)

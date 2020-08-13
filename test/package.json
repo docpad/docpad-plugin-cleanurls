@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "docpad-plugin-eco": "~2.5.0"
+    "docpad-plugin-eco": "~2.5.0",
+    "docpad-plugin-serve": "~2.2.0"
   }
 }

@@ -4,7 +4,6 @@
 
 <!-- /TITLE -->
 
-
 <!-- BADGES/ -->
 
 <span class="badge-travisci"><a href="http://travis-ci.com/docpad/docpad-plugin-cleanurls" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/com/docpad/docpad-plugin-cleanurls/master.svg" alt="Travis CI Build Status" /></a></span>
@@ -25,16 +24,13 @@
 
 <!-- /BADGES -->
 
-
 <!-- DESCRIPTION/ -->
 
 Adds support for clean URLs to DocPad
 
 <!-- /DESCRIPTION -->
 
-
 ## Usage
-
 
 ### `static`
 
@@ -44,7 +40,7 @@ For the `static` environment (i.e. when running DocPad with the `--env static` f
 
 If you would like to always use the static mode, you can set the `static` plugin configuration option to true with:
 
-``` coffee
+```coffee
 plugins:
 	cleanurls:
 		static: true
@@ -52,7 +48,7 @@ plugins:
 
 If you would like to disable the static mode for the static environment, you can do so with:
 
-``` coffee
+```coffee
 environments:
 	static:
 		plugins:
@@ -62,8 +58,7 @@ environments:
 
 If you would like to disable clean urls completely (not just the static mode) in the static environment, you can do so with:
 
-
-``` coffee
+```coffee
 environments:
 	static:
 		plugins:
@@ -71,17 +66,17 @@ environments:
 				enabled: false
 ```
 
-
 ### `trailingSlashes`
-Enable this plugin configuration option to generate `document.url`s like `'/beep/'` instead of `/beep`.  Defaults to `false`.
 
+Enable this plugin configuration option to generate `document.url`s like `'/beep/'` instead of `/beep`. Defaults to `false`.
 
 ### `collectionName`
+
 You can use this plugin configuration option (defaults to `html`) to tell the cleanurls plugin to use your own custom collection for which documents to apply clean URLs to.
 
 For instance, if you are wanting to remove all clean URLs for all documents that have `cleanurls: false` in the meta data, then you could do the following in your DocPad configuration file:
 
-``` coffee
+```coffee
 # Define a custom collection for cleanurls that ignores the documents we don't want
 collections:
 	cleanurls: ->
@@ -93,17 +88,15 @@ plugins:
 		collectionName: 'cleanurls'
 ```
 
-
 ### `getRedirectTemplate`
 
 You can customise the HTML template that is used for the redirect pages by specifying the `getRedirectTemplate` option which is a function that accepts `url` argument and an option `title` argument and returns a string.
-
 
 ### `simpleRedirects`
 
 Simple redirects work via routes in dynamic environments, and on static environments work via generating redirect HTML pages at the location of the source relative URL. They can be defined like so:
 
-``` coffee
+```coffee
 plugins:
 	cleanurls:
 		simpleRedirects:
@@ -115,7 +108,7 @@ plugins:
 
 Advanced redirects work via routes in dynamic environments, and on static environments work via a client-side javascript injection into the Script Block on your 404 Page document. They can be defined like so:
 
-``` coffee
+```coffee
 plugins:
 	cleanurls:
 		advancedRedirects: [
@@ -129,53 +122,50 @@ plugins:
 		]
 ```
 
-To ensure they work, you must make sure that your 404 Page document calls  `@getBlock('scripts').toHTML()` to output the Script Block, which we inject the client-side javascript into. Here is an example of such a document using eco and location at `src/documents/404.html.eco`:
+To ensure they work, you must make sure that your 404 Page document calls `@getBlock('scripts').toHTML()` to output the Script Block, which we inject the client-side javascript into. Here is an example of such a document using eco and location at `src/documents/404.html.eco`:
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Standard Meta -->
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- Site Properties -->
-	<title>404 Page Not Found</title>
+        <!-- Site Properties -->
+        <title>404 Page Not Found</title>
 
-	<!-- DocPad Meta -->
-	<%- @getBlock('meta').toHTML() %>
+        <!-- DocPad Meta -->
+        <%- @getBlock('meta').toHTML() %>
 
-	<!-- DocPad Styles -->
-	<%- @getBlock('styles').add('/vendor/404.css').toHTML() %>
-</head>
-<body>
-	<!-- 404 Page Content -->
-	<div class="container">
-	    <h1>Not Found 😲</h1>
-	    <p>Sorry, but the page you were trying to view does not exist.</p>
-	    <p>It looks like this was the result of either:</p>
-	    <ul>
-	        <li>a mistyped address</li>
-	        <li>an out-of-date link</li>
-	    </ul>
-	    <script>
-	        var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
-	    </script>
-	    <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
-	</div>
+        <!-- DocPad Styles -->
+        <%- @getBlock('styles').add('/vendor/404.css').toHTML() %>
+    </head>
+    <body>
+        <!-- 404 Page Content -->
+        <div class="container">
+            <h1>Not Found 😲</h1>
+            <p>Sorry, but the page you were trying to view does not exist.</p>
+            <p>It looks like this was the result of either:</p>
+            <ul>
+                <li>a mistyped address</li>
+                <li>an out-of-date link</li>
+            </ul>
+            <script>
+                var GOOG_FIXURL_LANG = (navigator.language || '').slice(0, 2),
+                    GOOG_FIXURL_SITE = location.host
+            </script>
+            <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+        </div>
 
-	<!-- DocPad Scripts -->
-	<%- @getBlock('scripts').toHTML() %>
-</body>
+        <!-- DocPad Scripts -->
+        <%- @getBlock('scripts').toHTML() %>
+    </body>
 </html>
 ```
 
 You can modify the client-side javascript by providing the option getRedirectScript` which is a function that accepts the advancedRedirects value as the first and only argument and returns a string which is the script to be injected.
-
-
-
-
 
 <!-- INSTALL/ -->
 
@@ -185,7 +175,6 @@ Install this DocPad plugin by entering <code>docpad install cleanurls</code> int
 
 <!-- /INSTALL -->
 
-
 <!-- HISTORY/ -->
 
 <h2>History</h2>
@@ -194,7 +183,6 @@ Install this DocPad plugin by entering <code>docpad install cleanurls</code> int
 
 <!-- /HISTORY -->
 
-
 <!-- CONTRIBUTE/ -->
 
 <h2>Contribute</h2>
@@ -202,7 +190,6 @@ Install this DocPad plugin by entering <code>docpad install cleanurls</code> int
 <a href="https://github.com/docpad/docpad-plugin-cleanurls/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
 <!-- /CONTRIBUTE -->
-
 
 <!-- BACKERS/ -->
 
@@ -248,7 +235,6 @@ These amazing people have contributed code to this project:
 <a href="https://github.com/docpad/docpad-plugin-cleanurls/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
 <!-- /BACKERS -->
-
 
 <!-- LICENSE/ -->
 
