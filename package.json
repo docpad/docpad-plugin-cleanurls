@@ -118,7 +118,7 @@
   "dependencies": {
     "docpad-baseplugin": "^1.4.0",
     "editions": "^4.0.0",
-    "safefs": "^6.11.0",
+    "safefs": "^8.2.0",
     "taskgroup": "^7.14.0"
   },
   "devDependencies": {
